@@ -408,7 +408,7 @@ class Money
     if self.currency == other_currency
       self
     else
-      @bank.exchange_with(self, other_currency, &rounding_method)
+      @bank.exchange_with(self, other_currency.to_s, &rounding_method)
     end
   end
 
